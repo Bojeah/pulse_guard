@@ -4,7 +4,9 @@ import { EquipmentCard } from '@/app/components/EquipmentCard';
 import { PowerChart } from '@/app/components/PowerChart';
 import { equipmentData, systemMetrics } from '@/data/sampleData';
 import { Activity, AlertTriangle, CheckCircle, TrendingUp, Zap, DollarSign, Clock, Sparkles} from 'lucide-react';
-import  Image  from "next/image"
+import  Image  from "next/image";
+import Link from "next/link";
+
 
 const Dashboard = () => {
   const criticalEquipment = equipmentData.filter((e: { status: string; }) => e.status === 'critical').length;
@@ -21,7 +23,7 @@ const Dashboard = () => {
           <Image src="/favicon.ico" alt="Project Logo" width={40} height={40} className='logo' />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-foreground">PowerGrid AI Monitor</h1>
+                <h1 className="text-2xl font-bold text-foreground">Pulse Guard</h1>
                 <p className="text-sm text-muted-foreground">Predictive Maintenance Dashboard</p>
               </div>
             </div>
@@ -116,7 +118,9 @@ const Dashboard = () => {
           <h2 className="text-xl font-semibold text-foreground mb-4">Equipment Health Status</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {equipmentData.map((equipment) => (
-              <EquipmentCard key={equipment.id} equipment={equipment} />
+              <Link key={equipment.id} href={`/equipments/${equipment.id}`}>
+              <EquipmentCard equipment={equipment} />
+              </Link>
             ))}
           </div>
         </div>

@@ -133,3 +133,115 @@ export const systemMetrics = {
   uptime: 99.7,
   predictedSavings: 145000,
 };
+
+export interface VoltageMetric {
+  timestamp: string;
+  voltage: number;
+}
+
+export interface CurrentMetric {
+  timestamp: string;
+  current: number;
+}
+
+export const voltageData: Record<string, VoltageMetric[]> = {
+  'TRN-001': [
+    { timestamp: '00:00', voltage: 410 },
+    { timestamp: '04:00', voltage: 405 },
+    { timestamp: '08:00', voltage: 420 },
+    { timestamp: '12:00', voltage: 435 },
+    { timestamp: '16:00', voltage: 430 },
+    { timestamp: '20:00', voltage: 415 },
+  ],
+  'GEN-002': [
+    { timestamp: '00:00', voltage: 460 },
+    { timestamp: '04:00', voltage: 455 },
+    { timestamp: '08:00', voltage: 470 },
+    { timestamp: '12:00', voltage: 485 },
+    { timestamp: '16:00', voltage: 475 },
+    { timestamp: '20:00', voltage: 465 },
+  ],
+  'CIR-003': [
+    { timestamp: '00:00', voltage: 380 },
+    { timestamp: '04:00', voltage: 370 },
+    { timestamp: '08:00', voltage: 390 },
+    { timestamp: '12:00', voltage: 400 },
+    { timestamp: '16:00', voltage: 395 },
+    { timestamp: '20:00', voltage: 382 },
+  ],
+  'MTR-004': [
+    { timestamp: '00:00', voltage: 415 },
+    { timestamp: '04:00', voltage: 410 },
+    { timestamp: '08:00', voltage: 425 },
+    { timestamp: '12:00', voltage: 435 },
+    { timestamp: '16:00', voltage: 430 },
+    { timestamp: '20:00', voltage: 418 },
+  ],
+  'TRN-005': [
+    { timestamp: '00:00', voltage: 400 },
+    { timestamp: '04:00', voltage: 395 },
+    { timestamp: '08:00', voltage: 405 },
+    { timestamp: '12:00', voltage: 415 },
+    { timestamp: '16:00', voltage: 408 },
+    { timestamp: '20:00', voltage: 398 },
+  ],
+  'GEN-006': [
+    { timestamp: '00:00', voltage: 470 },
+    { timestamp: '04:00', voltage: 465 },
+    { timestamp: '08:00', voltage: 475 },
+    { timestamp: '12:00', voltage: 485 },
+    { timestamp: '16:00', voltage: 480 },
+    { timestamp: '20:00', voltage: 470 },
+  ],
+};
+
+export const currentData: Record<string, CurrentMetric[]> = {
+  'TRN-001': [
+    { timestamp: '00:00', current: 145 },
+    { timestamp: '04:00', current: 140 },
+    { timestamp: '08:00', current: 155 },
+    { timestamp: '12:00', current: 165 },
+    { timestamp: '16:00', current: 160 },
+    { timestamp: '20:00', current: 150 },
+  ],
+  'GEN-002': [
+    { timestamp: '00:00', current: 225 },
+    { timestamp: '04:00', current: 215 },
+    { timestamp: '08:00', current: 240 },
+    { timestamp: '12:00', current: 255 },
+    { timestamp: '16:00', current: 250 },
+    { timestamp: '20:00', current: 235 },
+  ],
+  'CIR-003': [
+    { timestamp: '00:00', current: 18 },
+    { timestamp: '04:00', current: 15 },
+    { timestamp: '08:00', current: 22 },
+    { timestamp: '12:00', current: 25 },
+    { timestamp: '16:00', current: 23 },
+    { timestamp: '20:00', current: 20 },
+  ],
+  'MTR-004': [
+    { timestamp: '00:00', current: 70 },
+    { timestamp: '04:00', current: 68 },
+    { timestamp: '08:00', current: 75 },
+    { timestamp: '12:00', current: 80 },
+    { timestamp: '16:00', current: 78 },
+    { timestamp: '20:00', current: 72 },
+  ],
+  'TRN-005': [
+    { timestamp: '00:00', current: 95 },
+    { timestamp: '04:00', current: 90 },
+    { timestamp: '08:00', current: 100 },
+    { timestamp: '12:00', current: 110 },
+    { timestamp: '16:00', current: 105 },
+    { timestamp: '20:00', current: 98 },
+  ],
+  'GEN-006': [
+    { timestamp: '00:00', current: 175 },
+    { timestamp: '04:00', current: 170 },
+    { timestamp: '08:00', current: 180 },
+    { timestamp: '12:00', current: 195 },
+    { timestamp: '16:00', current: 190 },
+    { timestamp: '20:00', current: 178 },
+  ],
+};
